@@ -188,4 +188,33 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(counter);
     });
 
+    // Theme Toggle Logic
+    const themeBtn = document.getElementById('theme-toggle');
+    if (themeBtn) {
+        const darkIcon = themeBtn.querySelector('.dark-icon');
+        const lightIcon = themeBtn.querySelector('.light-icon');
+        
+        // Initial Check
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            darkIcon.style.display = 'none';
+            lightIcon.style.display = 'block';
+        }
+
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            
+            if (isLight) {
+                localStorage.setItem('theme', 'light');
+                darkIcon.style.display = 'none';
+                lightIcon.style.display = 'block';
+            } else {
+                localStorage.setItem('theme', 'dark');
+                darkIcon.style.display = 'block';
+                lightIcon.style.display = 'none';
+            }
+        });
+    }
+
 });
