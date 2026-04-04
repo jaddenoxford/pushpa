@@ -466,44 +466,6 @@
     </div>
 
     <script src="script.js"></script>
-    <script type="module">
-        import { scroll, animate } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const hero = document.querySelector(".hero");
-            const heroContent = document.querySelector(".hero-content");
-            const nextSection = document.querySelector(".why-us");
-
-            if (hero && heroContent) {
-                // Hero elements scale down and fade out on scroll
-                scroll(
-                    animate(heroContent, {
-                        opacity: [1, 0],
-                        scale: [1, 0.85],
-                        y: [0, 50] // Slight parallax down
-                    }),
-                    {
-                        target: hero,
-                        offset: ["start start", "end start"]
-                    }
-                );
-            }
-
-            if (nextSection) {
-                // Next section slides up and fades in smoothly as we scroll into it
-                scroll(
-                    animate(nextSection, {
-                        opacity: [0, 1],
-                        y: [100, 0]
-                    }),
-                    {
-                        target: nextSection,
-                        offset: ["start end", "center center"]
-                    }
-                );
-            }
-        });
-    </script>
 </body>
 
 </html>
