@@ -583,15 +583,19 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.2; }
     .solutions-grid { grid-template-columns: repeat(3, 1fr); }
     .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 }
+
 @media (max-width: 992px) {
-    .hero-content { flex-direction: column; text-align: center; }
+    .hero-content { flex-direction: column; text-align: center; gap: 2.5rem; }
     .hero-text h1 { font-size: 2.8rem; }
-    .hero-text p { margin: 0 auto 2rem; }
+    .hero-text p { margin: 0 auto 2rem; max-width: 100%; }
     .hero-features { justify-content: center; flex-wrap: wrap; }
-    .hero-form-wrapper { width: 100%; max-width: 500px; margin: 0 auto; flex: auto; }
+    .interactive-quote-card { width: 100%; max-width: 550px; margin: 0 auto; flex: 1 1 auto; }
 }
 
 @media (max-width: 768px) {
+    .section-title { font-size: 2rem; }
+    .section-subtitle { font-size: 1rem; margin-bottom: 2rem; }
+    .section-padding { padding: 3rem 0; }
     .solutions-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
     .solution-card { padding: 1.5rem 1rem; }
     .stats-grid { grid-template-columns: 1fr; }
@@ -603,6 +607,27 @@ h1, h2, h3, h4 { font-weight: 500; line-height: 1.2; }
     .nav-links.active { display: flex; }
     .mobile-toggle { display: flex; }
     .hero-text h1 { font-size: 2.2rem; }
+    .interactive-quote-card { padding: 1.5rem; max-width: 100%; }
+    .quote-step h3 { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .badges-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .badge-item { padding: 1.5rem 1rem; }
+    .process-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .footer-logo { display: flex; justify-content: center; }
+    .action-btn { width: 50px; height: 50px; }
+    .floating-contact { bottom: 1.5rem; right: 1.5rem; gap: 0.8rem; }
+    .theme-toggle-container { bottom: 1.5rem; left: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 { font-size: 1.8rem; }
+    .hero-text p { font-size: 0.95rem; }
+    .solutions-grid { grid-template-columns: 1fr; }
+    .badges-grid { grid-template-columns: 1fr; }
+    .stat-number { font-size: 2.8rem; }
+    .btn-gold, .btn-gold-outline, .btn-glowing-gold { padding: 0.8rem 1.2rem; font-size: 0.95rem; }
+    .glass-radio { padding: 0.6rem 0.8rem; font-size: 0.8rem; }
 }
 
 /* ---------------------------------------------------
