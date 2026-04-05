@@ -1140,16 +1140,18 @@ body.light-mode .review-author { border-color: rgba(0,0,0,0.1); }
     z-index: 4;
     cursor: ew-resize;
     margin: 0;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
 }
 .ba-slider-input::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
-    width: 40px; height: 100%;
+    width: 60px; height: 600px;
     background: transparent;
     cursor: ew-resize;
 }
 .ba-slider-input::-moz-range-thumb {
-    width: 40px; height: 100%;
+    width: 60px; height: 600px;
     background: transparent;
     cursor: ew-resize;
     border: none;
