@@ -998,7 +998,9 @@ body.light-mode .transition-logo { color: var(--color-text); }
     .review-card { flex: 0 0 calc(50% - 1rem); }
 }
 @media (max-width: 768px) {
-    .review-card { flex: 0 0 100%; min-width: 280px; }
+    .review-card { flex: 0 0 85%; min-width: 260px; }
+    .slider-nav { display: none; }
+    .reviews-slider-wrapper { margin-left: -1rem; margin-right: -1rem; padding: 0 1rem; }
 }
 .review-card:hover {
     transform: translateY(-5px);
@@ -1017,7 +1019,7 @@ body.light-mode .transition-logo { color: var(--color-text); }
     display: flex;
     gap: 0.2rem;
 }
-.review-stars span { font-size: 1.2rem; }
+.review-stars span { font-size: 1.5rem; letter-spacing: 2px; text-shadow: 0 0 10px rgba(212,175,55,0.4); }
 
 .verified-badge {
     display: inline-flex;
