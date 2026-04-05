@@ -216,4 +216,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Before & After Transformation Slider Logic
+    const baSliderInput = document.getElementById('baSliderInput');
+    const baAfter = document.getElementById('baAfter');
+    const baHandle = document.getElementById('baHandle');
+
+    if (baSliderInput && baAfter && baHandle) {
+        baSliderInput.addEventListener('input', (e) => {
+            const val = e.target.value;
+            baAfter.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
+            baHandle.style.left = `${val}%`;
+        });
+    }
+
 });
