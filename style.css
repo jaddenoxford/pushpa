@@ -959,3 +959,56 @@ body.light-mode .transition-logo { color: var(--color-text); }
     .about-content-wrapper { flex-direction: column; }
     .portfolio-gallery { grid-template-columns: 1fr; }
 }
+
+/* ---------------------------------------------------
+   Reviews Section
+--------------------------------------------------- */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.review-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.review-stars {
+    color: var(--color-gold-mid);
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.2rem;
+}
+.review-stars span {
+    font-size: 1.2rem;
+}
+.review-text {
+    font-size: 0.95rem;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+.review-author h4 {
+    color: #fff;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+.review-author span {
+    color: #888;
+    font-size: 0.85rem;
+}
+body.light-mode .review-card {
+    background: rgba(0,0,0,0.02);
+    border-color: rgba(0,0,0,0.1);
+}
+body.light-mode .review-text { color: var(--color-text-muted); }
+body.light-mode .review-author h4 { color: var(--color-text); }
