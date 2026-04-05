@@ -217,4 +217,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Reviews Slider Logic
+    const reviewsSlider = document.getElementById('reviewsSlider');
+    const prevReviewBtn = document.querySelector('.prev-review');
+    const nextReviewBtn = document.querySelector('.next-review');
+
+    if (reviewsSlider && prevReviewBtn && nextReviewBtn) {
+        prevReviewBtn.addEventListener('click', () => {
+            const cardWidth = reviewsSlider.querySelector('.review-card').offsetWidth + 32; // card bounds + gap
+            reviewsSlider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+        nextReviewBtn.addEventListener('click', () => {
+            const cardWidth = reviewsSlider.querySelector('.review-card').offsetWidth + 32;
+            reviewsSlider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+    }
+
 });
